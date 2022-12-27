@@ -11,7 +11,7 @@ export default class App extends Component {
     todos: [
       {
         id: 1,
-        title: 'Take Out Trash',
+        title: 'Pawan Yadav',
         completed: false,
       },
       {
@@ -44,17 +44,28 @@ export default class App extends Component {
       todos: this.state.todos.filter((todo) => todo.id !== id),
     });
   };
+    editTodo(id, newText) {
+    this.setState((state) => {
+      const todos = state.todos.map((todo) => {
+        if (todo.id === id) {
+          return { ...todos, text: newText };
+        }
+        return todo;
+      });
+      return { todos };
+    });
+  }
 
   addTodo = (title) => {
 
-    const length = 32;
+    // const length = 32;
 
     const newTodo = {
-      id: Math.round(
-        Math.pow(36, length + 1) - Math.random() * Math.pow(36, length)
-      )
-        .toString(36)
-        .slice(1),
+      // id: Math.round(
+      //   Math.pow(36, length + 1) - Math.random() * Math.pow(36, length)
+      // )
+        // .toString(36)
+        // .slice(1),
       title,
       completed: false,
     };
@@ -73,7 +84,8 @@ export default class App extends Component {
           <Todos
             todos={this.state.todos}
             markComplete={this.markComplete}
-            delTodo={this.delTodo}
+          delTodo={this.delTodo}
+          editTodo={this.editTodo}
           />
         {/* </div> */}
       </div>

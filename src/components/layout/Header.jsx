@@ -4,13 +4,15 @@ function Header() {
   return (
     <header
       style={{
-        background: "#333",
-        color: "#fff",
+        background: "green",
+        color: "black",
         textAlign: "center",
-        padding: "10px",
+        padding: "5px",
+        borderRadius: "20px",
+        
       }}
     >
-      <h1>TodoList</h1>
+      <h1>Todo</h1>
     </header>
   );
 }
