@@ -6,7 +6,8 @@ export default class Home extends Component {
         this.state = {
             title:"My React App",
             act:0,
-            empData:[]
+            empData: [],
+            index:""
         }
     }
     handleSubmit = (e) => {
