@@ -61,11 +61,7 @@ export default class App extends Component {
     // const length = 32;
 
     const newTodo = {
-      // id: Math.round(
-      //   Math.pow(36, length + 1) - Math.random() * Math.pow(36, length)
-      // )
-        // .toString(36)
-        // .slice(1),
+      
       title,
       completed: false,
     };
