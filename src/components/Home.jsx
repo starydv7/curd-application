@@ -4,6 +4,8 @@ export default class Home extends Component {
     constructor() {
         super();
         this.state = {
+            title:"My React App",
+            act:0,
             empData:[]
         }
     }
@@ -35,6 +37,10 @@ export default class Home extends Component {
     //     let empData = this.state.empData;
     //     empData.
     // }
+    handleEdit = (i) => {
+        let empData = this.state.empData[i];
+        this.refs.txtName.value = empData.name;
+    }
     render() {
         let empData = this.state.empData;
         return (
