@@ -5,6 +5,8 @@ import Header from './components/layout/Header';
 import AddTodo from './components/AddTodo';
 
 import './App.css'
+import Welcome from './components/Welcome';
+import Fetch from './components/Fetch';
 
 export default class App extends Component {
   state = {
@@ -73,8 +75,10 @@ export default class App extends Component {
 
   render() {
     return (
+     
       <div className='App'>
-       
+        <Welcome />
+        <Fetch/>
           <Header />
           <AddTodo addTodo={this.addTodo} />
           <Todos
