@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import styles from "./add.module.css";
 class Fetch extends Component {
     state = {
         data:[]
@@ -18,7 +18,7 @@ class Fetch extends Component {
        
           <div>
             {this.state.data.map((item) => (
-              <div key={item.id}>
+                <div key={item.id} className={styles.grid}>
                 {item.title}
                 <img src={item.url} alt="photos" />
                 <p>{item.albumId}</p>

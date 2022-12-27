@@ -6,8 +6,8 @@ import AddTodo from './components/AddTodo';
 
 import './App.css'
 import Welcome from './components/Welcome';
-import Fetch from './components/Fetch';
-
+// import Fetch from './components/Fetch';
+import Counter from "./components/Counter";
 export default class App extends Component {
   state = {
     todos: [
@@ -78,7 +78,8 @@ export default class App extends Component {
      
       <div className='App'>
         <Welcome />
-        <Fetch/>
+        {/* <Fetch/> */}
+        <Counter/>
           <Header />
           <AddTodo addTodo={this.addTodo} />
           <Todos
