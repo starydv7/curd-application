@@ -1,13 +1,15 @@
 
 import './App.css';
 import Home from './components/Home';
-import Todo from './components/Todo';
+import TodoApp from './components/TodoApp';
+
 
 function App() {
   return (
     <div className="App">
       {/* <Home/> */}
-      <Todo/>
+      {/* <Todo/> */}
+      <TodoApp/>
     </div>
   );
 }
