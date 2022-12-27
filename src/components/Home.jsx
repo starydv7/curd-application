@@ -41,6 +41,9 @@ export default class Home extends Component {
     handleEdit = (i) => {
         let empData = this.state.empData[i];
         this.refs.txtName.value = empData.name;
+         this.refs.txtAge.value = empData.age;
+          this.refs.txtRole.value = empData.role;
+
     }
     render() {
         let empData = this.state.empData;
@@ -62,8 +65,8 @@ export default class Home extends Component {
               <tr>
                 <th>Name</th>
                 <th>Age</th>
-                        <th>Role</th>
-                        <th>Delete</th>
+                <th>Role</th>
+                <th>Delete</th>
               </tr>
               {empData.map((data, i) => (
                 <tr key={i}>
@@ -71,10 +74,10 @@ export default class Home extends Component {
                   <td>{data.age}</td>
                   <td>{data.role}</td>
                   <td>
-                    <button onClick={this.handleDelete(i)}></button>Delete
+                    <button onClick={this.handleDelete(i)}>Delete</button>
                   </td>
                   <td>
-                    <button onClick={this.handleEdit(i)}></button>Edit
+                    <button onClick={this.handleEdit(i)}>Edit</button>
                   </td>
                 </tr>
               ))}
