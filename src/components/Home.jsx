@@ -24,6 +24,17 @@ export default class Home extends Component {
         })
         this.refs.myform.requestFullscreen()
     }
+    handleDelete = (i) => {
+        let empData = this.state.empData;
+        empData.splice(i, 1);
+        this.setState({
+            empData: empData
+        });
+    }
+    // handleEdit = (i) => {
+    //     let empData = this.state.empData;
+    //     empData.
+    // }
     render() {
         let empData = this.state.empData;
         return (
@@ -39,20 +50,28 @@ export default class Home extends Component {
               <input type="text" ref="txtRole" placeholder="Role.." />
               <br />
               <button onClick={(e) => this.handleSubmit(e)}>Save</button>
-                </form>
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Age</th>
+            </form>
+            <table>
+              <tr>
+                <th>Name</th>
+                <th>Age</th>
                         <th>Role</th>
-                    </tr>
-                    {empData.map((data, i) =>
-                        <tr key={i}>
-                            <td>{data.name}</td>
-                            <td>{data.age}</td>
-                            <td>{data.role}</td>
-                    </tr>)}
-                </table>
+                        <th>Delete</th>
+              </tr>
+              {empData.map((data, i) => (
+                <tr key={i}>
+                  <td>{data.name}</td>
+                  <td>{data.age}</td>
+                  <td>{data.role}</td>
+                  <td>
+                    <button onClick={this.handleDelete(i)}></button>Delete
+                  </td>
+                  <td>
+                    <button onClick={this.handleEdit(i)}></button>Edit
+                  </td>
+                </tr>
+              ))}
+            </table>
           </div>
         );
   }
