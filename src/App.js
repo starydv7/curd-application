@@ -8,6 +8,9 @@ import './App.css'
 import Welcome from './components/Welcome';
 // import Fetch from './components/Fetch';
 import Counter from "./components/Counter";
+import Message from './components/Message';
+import Life from './components/Life';
+import FtoC from './components/FtoC';
 export default class App extends Component {
   state = {
     todos: [
@@ -77,18 +80,21 @@ export default class App extends Component {
     return (
      
       <div className='App'>
-        <Welcome />
+        {/* <Welcome /> */}
         {/* <Fetch/> */}
-        <Counter/>
-          <Header />
+        {/* <Counter /> */}
+        {/* <Message /> */}
+        <Life/>
+          {/* <Header />
           <AddTodo addTodo={this.addTodo} />
           <Todos
             todos={this.state.todos}
             markComplete={this.markComplete}
           delTodo={this.delTodo}
           editTodo={this.editTodo}
-          />
+          /> */}
         {/* </div> */}
+        <FtoC/>
       </div>
     );
   }
