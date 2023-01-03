@@ -5,27 +5,27 @@ class Fetch extends Component {
         data:[]
     }
     fetchApi = () => {
-        fetch("https://jsonplaceholder.typicode.com/photos")
-            .then((resp) => resp.json())
-            .then((fetchData) => {
-                this.setState({ data: fetchData });
-            });
+        fetch("https://dummyjson.com/users")
+          .then((resp) => resp.json())
+          .then((fetchData) => {
+            // this.setState({ data: fetchData });
+            console.log(fetchData);
+          });
     }
   render() {
     return (
       <div>
         <button onClick={this.fetchApi}>Load Data</button>
-       
-          <div>
-            {this.state.data.map((item) => (
-                <div key={item.id} className={styles.grid}>
-                {item.title}
-                <img src={item.url} alt="photos" />
-                <p>{item.albumId}</p>
-              </div>
-            ))}
-          </div>
-        
+
+        <div>
+          {this.state.data.map((item) => (
+            <div key={item.id} className={styles.grid}>
+              {item.id}
+              <img src={item.image} alt="photos" />
+              <p>{item.firstName}</p>
+            </div>
+          ))}
+        </div>
       </div>
     );
   }
