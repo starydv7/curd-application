@@ -11,7 +11,8 @@ class Fetch extends Component {
              this.setState({ data: fetchData });
             console.log(fetchData);
           });
-    }
+  }
+  
   render() {
     return (
       <div>
