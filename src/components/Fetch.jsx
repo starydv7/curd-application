@@ -16,7 +16,6 @@ class Fetch extends Component {
     return (
       <div>
         <button onClick={this.fetchApi}>Load Data</button>
-
         <div>
           {this.state.data.map((item) => (
             <div key={item.id} className={styles.grid}>
