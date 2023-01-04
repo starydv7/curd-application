@@ -9,7 +9,7 @@ function Header() {
         textAlign: "center",
         padding: "5px",
         borderRadius: "20px",
-        
+      
       }}
     >
       <h1>Todo</h1>

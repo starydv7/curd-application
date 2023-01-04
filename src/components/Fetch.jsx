@@ -2,13 +2,13 @@ import React, { Component } from 'react'
 import styles from "./add.module.css";
 class Fetch extends Component {
     state = {
-        data:[]
+      data: {}
     }
     fetchApi = () => {
-        fetch("https://dummyjson.com/users")
+        fetch("https://dummyjson.com/products")
           .then((resp) => resp.json())
           .then((fetchData) => {
-            // this.setState({ data: fetchData });
+             this.setState({ data: fetchData });
             console.log(fetchData);
           });
     }
