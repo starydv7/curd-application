@@ -12,6 +12,7 @@ class Fetch extends Component {
             console.log(fetchData);
           });
   }
+  
   render() {
     return (
       <div>
